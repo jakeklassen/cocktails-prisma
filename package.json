@@ -44,6 +44,7 @@
     "@nrwl/nest": "^15.8.5",
     "@nrwl/node": "15.8.5",
     "@nrwl/nx-cloud": "latest",
+    "@nrwl/nx-linux-x64-gnu": "^15.9.2",
     "@nrwl/react": "15.8.5",
     "@nrwl/vite": "15.8.5",
     "@nrwl/webpack": "15.8.5",
