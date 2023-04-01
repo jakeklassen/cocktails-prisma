@@ -26,6 +26,9 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
+    env:
+      DATABASE_URL: 'postgresql://user:password@postgres:5432/cocktails-ci?schema=public'
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -58,8 +61,6 @@ jobs:
           npm ci
 
       - name: Run API tests
-        env:
-          DATABASE_URL: 'postgresql://user:password@postgres:5432/cocktails-ci?schema=public'
         run: npx nx run api:test --coverage --verbose
 
       - name: Run Client tests
